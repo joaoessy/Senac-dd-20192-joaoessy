@@ -1,4 +1,4 @@
-package classeComum;
+package model;
 
 
 import java.sql.Connection;
