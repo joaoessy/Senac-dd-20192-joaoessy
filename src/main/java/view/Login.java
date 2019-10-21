@@ -86,17 +86,17 @@ public class Login extends JFrame {
 		lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		txtSenha = new JTextField();
-		txtSenha.setBounds(44, 119, 85, 20);
+		txtSenha.setBounds(44, 104, 85, 20);
 		panelLogin.add(txtSenha);
 		txtSenha.setColumns(10);
 		
 		textlogin = new JTextField();
-		textlogin.setBounds(44, 59, 86, 20);
+		textlogin.setBounds(43, 47, 86, 20);
 		panelLogin.add(textlogin);
 		textlogin.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("senha");
-		lblSenha.setBounds(42, 92, 87, 26);
+		lblSenha.setBounds(43, 78, 87, 26);
 		panelLogin.add(lblSenha);
 		lblSenha.setHorizontalAlignment(SwingConstants.CENTER);
 		
@@ -105,12 +105,11 @@ public class Login extends JFrame {
 		panelLogin.add(btnEntrar);
 		
 		JButton btnCadastrarse = new JButton("Cadastrar");
-		btnCadastrarse.setHorizontalAlignment(SwingConstants.LEFT);
 		btnCadastrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnCadastrarse.setBounds(43, 184, 89, 23);
+		btnCadastrarse.setBounds(30, 184, 116, 23);
 		panelLogin.add(btnCadastrarse);
 		
 		JLabel lblImagemFundo = new JLabel("");
