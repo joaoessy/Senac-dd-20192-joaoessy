@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class TelaEntradaLoguin extends JFrame {
+public class TelaEntradaLogin extends JFrame {
 
 	private JPanel contentPane;
 	private JTable table;
@@ -22,7 +22,7 @@ public class TelaEntradaLoguin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaEntradaLoguin frame = new TelaEntradaLoguin();
+					TelaEntradaLogin frame = new TelaEntradaLogin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,7 +34,7 @@ public class TelaEntradaLoguin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaEntradaLoguin() {
+	public TelaEntradaLogin() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
