@@ -9,11 +9,13 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JTextField;
 
-public class TelaEntradaLogin extends JFrame {
+public class TelaEntradaIdoso extends JFrame {
 
 	private JPanel contentPane;
-	private JTable table;
+	private JTable tableIdoso;
+	private JTextField observacao;
 
 	/**
 	 * Launch the application.
@@ -22,7 +24,7 @@ public class TelaEntradaLogin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaEntradaLogin frame = new TelaEntradaLogin();
+					TelaEntradaIdoso frame = new TelaEntradaIdoso();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,7 +36,7 @@ public class TelaEntradaLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaEntradaLogin() {
+	public TelaEntradaIdoso() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -55,8 +57,8 @@ public class TelaEntradaLogin extends JFrame {
 		lblMedicoresponsavel.setBounds(264, 48, 160, 14);
 		panel.add(lblMedicoresponsavel);
 		
-		table = new JTable();
-		table.setModel(new DefaultTableModel(
+		tableIdoso = new JTable();
+		tableIdoso.setModel(new DefaultTableModel(
 			new Object[][] {
 				{null, null, null},
 				{null, null, null},
@@ -73,10 +75,10 @@ public class TelaEntradaLogin extends JFrame {
 				"New column", "New column", "New column"
 			}
 		));
-		table.setColumnSelectionAllowed(true);
-		table.setCellSelectionEnabled(true);
-		table.setBounds(25, 225, 185, -157);
-		panel.add(table);
+		tableIdoso.setColumnSelectionAllowed(true);
+		tableIdoso.setCellSelectionEnabled(true);
+		tableIdoso.setBounds(25, 225, 185, -157);
+		panel.add(tableIdoso);
 		
 		JLabel lblCuidador = new JLabel("Cuidador");
 		lblCuidador.setBounds(264, 73, 91, 14);
@@ -89,5 +91,10 @@ public class TelaEntradaLogin extends JFrame {
 		JLabel lblObservacao = new JLabel("");
 		lblObservacao.setBounds(264, 98, 160, 136);
 		panel.add(lblObservacao);
+		
+		observacao = new JTextField();
+		observacao.setBounds(264, 105, 160, 129);
+		panel.add(observacao);
+		observacao.setColumns(10);
 	}
 }
