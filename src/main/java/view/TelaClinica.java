@@ -18,7 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class Primeiratela {
+public class TelaClinica {
 
 	private JFrame frame;
 	private JTable table;
@@ -30,7 +30,7 @@ public class Primeiratela {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Primeiratela window = new Primeiratela();
+					TelaClinica window = new TelaClinica();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class Primeiratela {
 	/**
 	 * Create the application.
 	 */
-	public Primeiratela() {
+	public TelaClinica() {
 		initialize();
 	}
 
@@ -55,9 +55,9 @@ public class Primeiratela {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(222, 11, 115, 20);
-		frame.getContentPane().add(comboBox);
+		JComboBox comboBoxTipo = new JComboBox();
+		comboBoxTipo.setBounds(222, 11, 115, 20);
+		frame.getContentPane().add(comboBoxTipo);
 		
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
@@ -86,8 +86,12 @@ public class Primeiratela {
 		btnEditar.setBounds(422, 11, 89, 23);
 		frame.getContentPane().add(btnEditar);
 		
+		JComboBox comboBoxNome = new JComboBox();
+		comboBoxNome.setBounds(72, 11, 115, 20);
+		frame.getContentPane().add(comboBoxNome);
+		
 		JLabel Fundo = new JLabel("");
-		Fundo.setIcon(new ImageIcon(Primeiratela.class.getResource("/icon_imag/idoso.jpg")));
+		Fundo.setIcon(new ImageIcon(TelaClinica.class.getResource("/icon_imag/idoso.jpg")));
 		Fundo.setHorizontalAlignment(SwingConstants.CENTER);
 		Fundo.setBounds(0, 0, 592, 360);
 		frame.getContentPane().add(Fundo);

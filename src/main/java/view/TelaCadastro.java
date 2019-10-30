@@ -17,6 +17,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class TelaCadastro extends JFrame {
 
@@ -28,6 +31,8 @@ public class TelaCadastro extends JFrame {
 	private JTextField txtObservacao;
 	private JTextField textcredenciais;
 	private JTextField textcrm;
+	private JTextField textSenha;
+	private JTextField textlogin;
 
 	/**
 	 * Launch the application.
@@ -50,14 +55,14 @@ public class TelaCadastro extends JFrame {
 	 */
 	public TelaCadastro() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 475, 335);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 434, 261);
+		panel.setBounds(0, 0, 458, 296);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -65,8 +70,8 @@ public class TelaCadastro extends JFrame {
 		lblNome.setBounds(10, 54, 46, 14);
 		panel.add(lblNome);
 		
-		JLabel lblIdade = new JLabel("Idade");
-		lblIdade.setBounds(10, 77, 46, 14);
+		JLabel lblIdade = new JLabel("Dt nacimento");
+		lblIdade.setBounds(10, 77, 66, 14);
 		panel.add(lblIdade);
 		
 		JLabel lblCpf = new JLabel("Cpf");
@@ -82,7 +87,7 @@ public class TelaCadastro extends JFrame {
 		panel.add(lblCrm);
 		
 		JLabel lblCredenciais = new JLabel("Credenciais");
-		lblCredenciais.setBounds(231, 122, 72, 14);
+		lblCredenciais.setBounds(231, 147, 72, 14);
 		panel.add(lblCredenciais);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -103,22 +108,22 @@ public class TelaCadastro extends JFrame {
 		panel.add(lblObservao);
 		
 		textNome = new JTextField();
-		textNome.setBounds(66, 51, 165, 20);
+		textNome.setBounds(76, 51, 155, 20);
 		panel.add(textNome);
 		textNome.setColumns(10);
 		
 		txtIdade = new JTextField();
-		txtIdade.setBounds(66, 74, 46, 20);
+		txtIdade.setBounds(102, 74, 76, 20);
 		panel.add(txtIdade);
 		txtIdade.setColumns(10);
 		
 		textCpf = new JTextField();
-		textCpf.setBounds(76, 97, 99, 20);
+		textCpf.setBounds(103, 97, 99, 20);
 		panel.add(textCpf);
 		textCpf.setColumns(10);
 		
 		txtNumero = new JTextField();
-		txtNumero.setBounds(76, 119, 99, 20);
+		txtNumero.setBounds(103, 119, 99, 20);
 		panel.add(txtNumero);
 		txtNumero.setColumns(10);
 		
@@ -128,7 +133,7 @@ public class TelaCadastro extends JFrame {
 		txtObservacao.setColumns(10);
 		
 		textcredenciais = new JTextField();
-		textcredenciais.setBounds(231, 155, 193, 95);
+		textcredenciais.setBounds(231, 164, 193, 95);
 		panel.add(textcredenciais);
 		textcredenciais.setColumns(10);
 		
@@ -138,12 +143,42 @@ public class TelaCadastro extends JFrame {
 		textcrm.setColumns(10);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnCadastrar.setBounds(335, 10, 89, 23);
 		panel.add(btnCadastrar);
 		
 		JButton btnLimpar = new JButton("Limpar");
 		btnLimpar.setBounds(236, 10, 89, 23);
 		panel.add(btnLimpar);
+		
+		JButton btnExcluir = new JButton("Excluir");
+		btnExcluir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnExcluir.setBounds(135, 10, 89, 23);
+		panel.add(btnExcluir);
+		
+		JLabel lblSenha = new JLabel("Senha ");
+		lblSenha.setBounds(247, 122, 43, 14);
+		panel.add(lblSenha);
+		
+		textSenha = new JTextField();
+		textSenha.setBounds(290, 119, 115, 20);
+		panel.add(textSenha);
+		textSenha.setColumns(10);
+		
+		textlogin = new JTextField();
+		textlogin.setBounds(290, 97, 115, 20);
+		panel.add(textlogin);
+		textlogin.setColumns(10);
+		
+		JLabel lblLogin = new JLabel("Login");
+		lblLogin.setBounds(244, 100, 46, 14);
+		panel.add(lblLogin);
 		
 	}
 	}
